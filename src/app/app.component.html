@@ -1,20 +1,110 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!-- <h1>notre application angular 5</h1> -->
+<!--<courses></courses>-->
+<!--<p>{{body | resume:1:20 }}</p>-->
+
+<!--<favorite [is-fav]="post.isFavorite" 
+(myEvent)="onFavoriteChanged($event)"></favorite>
+-->
+<!-- <panel>
+    <div class="header">
+        This is Head
+    </div>
+    <div class="body" >
+        This is body
+    </div>
+
+</panel> -->
+
+<!-- ngIf -->
+<!-- <div *ngIf="courses.length > 0; then myCourses  else noCorses">
+  
+</div> -->
+<!-- <div *ngIf="courses.length ==0"> 
+    pas de cours
+</div> -->
+<!-- <ng-template #myCourses>
+    Liste de mes courses
+</ng-template>
+<ng-template #noCorses>
+    pas de course
+</ng-template> -->
+
+<!-- HIDDEN PROPRETY -->
+<!-- <div [hidden]="courses.length>0">
+    Liste de mes cours 
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
+<div [hidden]="courses.length==0">
+    Pas de cours 
+</div> -->
+
+<!--  -->
+
+<!-- NgSwitch -->
+<!-- <ul class="nav nav-pills">
+    <li [class.active]="ViewCourse=='Laravel'"><a (click)="ViewCourse='Laravel'" >Laravel</a></li>
+    <li [class.active]="ViewCourse=='Angular'"><a (click)="ViewCourse='Angular'" > Angular </a></li>
+    <li [class.active]="ViewCourse=='Symfony'"><a (click)="ViewCourse='Symfony'">  Symfony</a></li>
 </ul>
 
+<div [ngSwitch]="ViewCourse">
+    <div *ngSwitchCase="'Laravel'">lorem Laravel </div>
+    <div *ngSwitchCase="'Angular'">Lorem Angular </div>
+    <div *ngSwitchCase="'Symfony'">Loren Symfony </div>
+    <div *ngSwitchDefault>  Autre chose ... </div>
+</div> -->
+
+
+<!-- 
+
+<button class="btn btn-success" (click)="loadCourses()">Load</button>
+<button  class="btn btn-success" (click)="addCourse()">Ajouter</button>
+<ul>
+    <li *ngFor="let cours of courses; trackBy: trackCourse">
+         -->
+        <!-- last as isEvent =>kat returni true ila element hwa Last element fi tableau--> 
+        <!-- first as isEvent =>kat returni true ila element hwa awal element fi tableau-->
+         <!--even as isEvent =>kat returni true ila kan index AwaLi  dyal element fi tableau-->
+        <!--index as i =>katjib Lina index dyal element fi tableau-->
+       
+        <!-- <span *ngIf="isEvent">Event -</span>   -->
+
+      <!-- {{i}}  {{cours.id}} {{cours.title}} 
+      
+      <button class="btn btn-wraning" (click)="updateCourse(cours)">Update</button>
+      <button class="btn btn-danger" (click)="removeCourse(cours)">Remove</button>
+
+    </li>
+</ul>
+<span class="glyphicon"
+    [ngClass]="{
+        'glyphicon-star':IsSelected,
+        'glyphicon-star-empty':!IsSelected
+    }"
+    (click)="myFavorite()"
+    [ngStyle]="{'color': IsSelected? 'red':'blue',
+            'font-size': IsSelected? '40px':'20px'
+        }"
+>
+</span>
+
+<p *ngIf="personne.adresse">{{personne.adresse.ville}}</p>
+
+<p >{{personne.adresse?.ville}}</p> -->
+
+
+<!-- <br>
+<input type="text" appInputFormat [format]="'lowcase'" >
+<input type="text"  [appTextFormat]="'U'"> -->
+
+
+<!-- <div class="container">
+    <div class="col-md-6 col-md-offset-3">
+         <contact-form></contact-form> 
+     <signup-form></signup-form> 
+        <posts></posts>
+        <github-folowers></github-folowers>
+        
+    </div>
+</div> -->
+<navbar></navbar>
+<router-outlet></router-outlet>

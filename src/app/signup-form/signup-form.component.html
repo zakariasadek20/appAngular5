@@ -1,0 +1,35 @@
+
+
+<form [formGroup]="form" >
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input formControlName="username" class="form-control" 
+    type="text"  id="username">
+    <!-- <div class="alert alert-danger" *ngIf="form.get('username').touched && ! form.get('username').valid"> -->
+    <div class="alert alert-danger" *ngIf="username.touched && ! username.valid">
+      <div class="alert alert-danger" *ngIf="username.errors.required">username is required</div>
+      <div class="alert alert-danger" *ngIf="username.errors.minlength">
+        Ce champ doit avoir au moins {{username.errors.minlength.actualLength}} / {{username.errors.minlength.requiredLength}} chars 
+     </div>
+     <div class="alert alert-danger" *ngIf="username.errors.connotContainSpace">
+      Ce champ ne  doit  pas avoir space
+   </div>
+    </div>
+    
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input formControlName="password" class="form-control" 
+    type="text"  id="password">
+    <!-- <div class="alert alert-danger" *ngIf="form.get('password').touched && ! form.get('password').valid"> -->
+    <div class="alert alert-danger" *ngIf="password.touched && ! password.valid">
+      password is required
+    </div>
+   
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary">Registre</button>
+  </div>
+
+</form>
